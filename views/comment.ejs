@@ -1,0 +1,35 @@
+<br>
+<br>
+<hr>
+
+
+<h3>Add Comment</h3>
+
+<div class="todo-container" id="aa">
+
+  <form id="create-todo" action="/posts/addcomment" method="post">
+    <input type="hidden" name="postid" value=<%=post._id%>>
+
+    <label for="">Name</label>
+    <input class="form-control" type="text" name="name" value="">
+    <label for="">Body</label>
+    <input class="form-control" type="text" name="body" value="">
+
+    <button type="submit" class="btn btn-primary" name="submit" value="Add Comment">Add</button>
+  </form>
+  
+  <div class="chat-messages">
+    <% if (post.comments) { post.comments.forEach(function(comment) { %>
+      <div class="todo parent wrap" >
+        <span class="comment box"> <%= comment.name %> </span>
+        
+        <p class="box"> 💬: <%= comment.body %> </p>
+        
+      </div>
+      
+      <% }); } %>
+
+  </div>
+
+
+</div>

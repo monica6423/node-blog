@@ -1,0 +1,47 @@
+<%- include("partials/header") -%>
+
+
+<a href="/compose/managepost" class="btn btn-secondary">Manage Post</a>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+
+<h1>Compose</h1>
+
+<!-- enctype="multipart/form-data"!!!! -->
+<form class="" action="/compose" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="">Title</label>
+    <input class="form-control" type="text" name="postTitle" value="">
+    <br>
+    <label for="">Category</label>
+    <select class="form-control" name="category">
+      <% categories.forEach(function(category){ %>
+      <option value=<%= category.name %>><%= category.name %></option>
+      <% }) %>
+
+    </select>
+
+    <br>
+    <label for="">Main Image</label>
+    <input class="form-control" type="file" name="mainimage" required>
+
+    <label for="">Post</label>
+    <textarea class="form-control" id="editor1" name="postBody" rows="5" cols="30">
+
+    </textarea>
+    <!-- <script>
+      CKEDITOR.replace('editor1', {
+        allowedContent: true,
+        autoGrow_onStartup: true,
+        enterMode: CKEDITOR.ENTER_BR
+      });
+
+    </script> -->
+  </div>
+  <button type="submit" class="btn btn-primary" name="list">Publish</button>
+
+  <!-- action is /compose -->
+
+</form>
+
+
+<%- include("partials/footer") -%>

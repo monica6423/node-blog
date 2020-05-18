@@ -1,0 +1,63 @@
+<%- include("partials/mainheader") -%>
+
+
+<ul style="text-align: center;" class="button-group filter-button-group">
+  <li class="voteButton buttons active"data-filter="*">All</li>
+  <li class="voteButton buttons"data-filter=".Architecture">Architecture</li>
+  <li class="voteButton buttons"data-filter=".Technology">Technology</li>
+  <li class="voteButton buttons"data-filter=".Nature">Nature</li>
+</ul>
+
+
+
+<div class="portfolio-active" id="myDIV">
+
+    <% posts.forEach(function(post) { %>
+      <div class="grid-item frame <%= post.category %>" data-filter="<%= post.category %>">
+        <div class="framin">
+          <h3> <%= post.title %> </h3>
+          <div class="post">
+            <span class="postCategory"> Posted in <%= post.category %> on <%= moment(post.date).format("MM-DD-YYYY") %> </span>
+          
+            <span class="voteCount">
+              <span class="likeNum" id="likes-count-<%= post._id %>"><%= post.likes_count %></span>
+              
+              <button  class="voteLike" >
+              <i onclick="thumbUp(event);"
+              data-id="<%= post._id %>" data-like="Like" class="fas fa-heart fa-1x"></i>
+              </button>
+            </span>
+            
+          </div>
+          
+          
+          
+          <p> <%= post.content.substring(0,20)+"..." %>
+            <a href="/posts/<%=post._id%>">Read more</a>
+          </p>
+          <div class="postImg">
+            <img src="/images/<%= post.mainimage %>" alt="">
+          </div>
+          
+          <br>
+          <br>
+
+        </div>
+       
+      </div>
+      <% }) %>
+
+
+  
+
+
+</div>
+
+
+
+
+
+
+<hr>
+
+<%- include("partials/mainfooter") -%>

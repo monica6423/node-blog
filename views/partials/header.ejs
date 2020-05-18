@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Daily Journal</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css" />
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/comment.js"></script>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/img/blogLogo.png" />
+
+</head>
+
+<body >
+<nav class="navbar navbar-default">
+  <div class="container">
+
+    <a href="/" style="text-decoration:none;">
+      <div class="navbar-header">
+      <img class="logo" src="/img/blogLogo.png" alt="">
+      <p class="navbar-brand">Instant Blog</p>
+    </div>
+  </a>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <%- include("weather") -%>
+      <!-- 6 -->
+      <li id="home">
+        <h6><a href="/">HOME</a></h6>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
+
+  <div class="container">

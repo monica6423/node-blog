@@ -1,0 +1,24 @@
+<%- include("partials/header") -%>
+
+<div style="display: flex; flex-wrap: wrap; position: relative;">
+    <div style="width: 50%;">
+        <h1> <%= title %></h1>
+        <h5> Posted in <%= post.category %> on <%= moment(post.date).format("MM-DD-YYYY") %> </h5>
+        
+        <p> <%= content %> </p>
+        
+        <img src="/images/<%= post.mainimage %>" alt="">
+        
+    
+    </div>
+    
+    <div style="width: 40%; position: absolute; right: 0;">
+        <%- include("comment") -%>
+    </div>
+    
+
+
+</div>
+
+
+<%- include("partials/footer") -%>

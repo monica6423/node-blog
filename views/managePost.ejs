@@ -1,0 +1,29 @@
+<%- include("partials/header") -%>
+
+
+<a href="/compose/managepost" class="btn btn-secondary">Manage Post</a>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+
+<h1>Manage Post</h1>
+
+<div class="container">
+
+
+    <% posts.forEach(post => { %>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4 class="card-title"><%= post.title %></h4>
+            <div class="card-subtitle text-muted mb-2">
+                <%= moment(post.date).format("MM-DD-YYYY") %>
+            </div>
+            <a href="articles/<%= post.id %>" class="btn btn-info">Edit</a>
+            <form action="/articles/<%= post.id %>/delete" method="POST" class="d-inline">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+    <% }) %>
+</div>
+
+
+<%- include("partials/footer") -%>

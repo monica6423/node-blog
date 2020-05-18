@@ -1,0 +1,330 @@
+html{
+  min-height: 100%;
+  position: relative;
+}
+
+button:not(:disabled){
+  outline: none;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.footer-padding{
+  padding-bottom: 100px;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+	text-align: center;
+
+  margin-top: 50px;
+	width: 100%;
+	height: 60px;
+	background-color: #1abc9c;
+}
+
+.footer p {
+	padding-top: 22px;
+	font-size: 12px;
+  color: #fff;
+}
+/*SLIDER*/
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.slide{
+  width: 100%;
+	height: 370px; 
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-shadow:2px 2px rgba(0, 0, 0, 0.24);
+}
+.b1{
+  background-image: url(../img/c1.jpg);
+  
+}
+.b2{
+  background-image: url(../img/c2.jpg);
+}
+.b3{
+  background-image: url(../img/c3.jpg);
+}
+.b4{
+  background-image: url(../img/c4.jpg);
+}
+.b5{
+  background-image: url(../img/c5.jpg);
+}
+.slide-img{
+  list-style: none;
+  width: auto;
+  padding-bottom: 20px;
+}
+
+#sliderBoard{		/*div*/
+
+	width: 100%;
+	height: 420px;
+	margin: 20px auto;
+
+	overflow: hidden;
+}
+#content{			/*ul*/
+	position: relative;
+}
+#content li{		/*li*/
+  float: left;
+  
+}
+
+/* click button */
+#contentButton{
+	/* border: 1px solid red; */
+
+	text-align: center;
+	width: 100%;
+	height: 50px;
+}
+#contentButton li{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: rgb(238, 232, 232);
+	display: inline-block;
+	margin: 5px;
+}
+#contentButton li.clickMe{
+	background: rgb(96,176,244);
+}
+
+
+/*HOME EJS*/
+.postImg{
+  text-align: center;
+}
+img{
+  width: 50%;
+  
+}
+
+.postCategory{
+  font-size: 16px;
+}
+.voteButton{
+  background-color: transparent; 
+  border: transparent; 
+  color: #1abc9c;
+  padding-bottom: 10px;
+  font-size: 16px;
+  padding: 5px;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.clicks{
+  color: white;
+  background-color: rgb(26,203,217);
+}
+.voteLike{
+  background-color: transparent; 
+  border: transparent; 
+  color: #aaaaaaa8;
+  padding-bottom: 10px;
+  font-size: 16px;
+  padding-right: 5px;
+}
+
+.red{
+  color: red;
+}
+
+.voteCount{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: transparent; 
+  border: transparent; 
+  color: #1abc9c;
+}
+
+.likeNum{
+  font-size: 13px;
+}
+/**MASONRY LAYOUT**/
+
+.portfolio-active{
+  margin: 0 auto;
+}
+
+.grid-item{
+  position: relative;
+  margin: 15px;
+} 
+
+ .frame {
+  width: 240px;
+  height: 450px;
+
+} 
+.framin{
+  border-radius: 6px;
+  padding: 5px;
+  border: 1px solid transparent;
+  box-shadow: 0 0.1em 1.1em 0 rgba(0,0,0,.1);
+  position: relative;
+} 
+
+
+@media (min-width: 768px){
+  .md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: calc(25% - 20px);
+}
+}
+.md-3{
+  position: relative;
+  width: 100%; 
+  padding-right: 15px;
+  padding-left: 15px; 
+}
+
+
+
+
+
+/*COMMENT EJS*/
+hr{
+  border: transparent;
+}
+.comment{
+  margin-bottom: 0;
+}
+.btn-primary{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.weatherImg{
+  width: 60px;
+}
+
+li{
+  text-align: right;
+}
+.logo{
+  width: 60px;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 250px;
+  overflow-y: scroll;
+}
+.chat-messages::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.chat-messages::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgb(148, 247, 109); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: rgb(193, 248, 171); 
+}
+
+/**/
+.parent {
+  width: 100%;
+  display: flex;
+
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap
+}
+
+
+.orange, .grey{
+  text-align: center;
+}
+
+/***/
+.theme-switch {
+  position: fixed;
+  top: 5px;
+  right:5px;
+  width: 50px;
+  height: 20px;
+  background: #1abc9c;
+  border-radius: 50px;
+
+}
+
+.switch {
+
+  width: 10px;
+  height: 10px;
+  background:  #000;
+  border-radius: 100%;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  transition: 0.5s all ease;
+}
+
+
+
+.focus {
+  background: #eb6864;
+
+}
+
+.ball {
+  transform: translateX(33px);
+  background: white;
+}
+
+.dark-theme{
+  background-color: black;
+  color: white;
+}
+

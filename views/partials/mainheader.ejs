@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Daily Journal</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css" />
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/comment.js"></script>
+  <script src="/js/isotope.min.js"></script>
+  <script src="/js/thumbup.js"></script>
+  <script src="/js/slider.js"></script>
+
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/img/blogLogo.png" />
+
+</head>
+<nav class="navbar navbar-default">
+  <div class="container">
+    
+    <div class="navbar-header">
+      <img class="logo" src="/img/blogLogo.png" alt="">
+      <p class="navbar-brand">Instant Blog</p>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <%- include("weather") -%>
+      <!-- 6 -->
+    
+      <li id="about">
+        <h6><a href="/COMPOSE">Write a Blog</a></h6>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- <div class="theme-switch">
+  <div class="switch"></div>
+</div> -->
+
+<body>
+  <div id="sliderBoard">
+    <ul id="content">
+      <li class="slide-img"><div class="slide b2">It's Simple</div></li>
+      <li class="slide-img"><div class="slide b3">About Ideas</div></li>
+      <li class="slide-img"><div class="slide b4">Creating a Better Future</div></li>
+      <li class="slide-img"><div class="slide b5">We Believe That Great Style</div></li>
+      <li class="slide-img"><div class="slide b1">It's Story-minded</div></li>
+    </ul>
+    <ul id="contentButton">
+
+    </ul>
+  </div>
+
